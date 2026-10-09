@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EquityList Brand Kit · Sneha Baid</title>
+<meta name="description" content="Spec brand kit for EquityList by Sneha Baid: audit, kit, and a deep dive on the vesting chart. Not affiliated with EquityList.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400..700&display=swap">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#1A1830;}
+body{padding:24px 16px 64px;display:flex;flex-direction:column;align-items:center;gap:24px;font-family:'Geist',Arial,sans-serif}
+.frame{width:100%;max-width:1280px;aspect-ratio:16/9;position:relative;overflow:hidden;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,.35)}
+.stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+.stage>section{position:relative;width:1920px;height:1080px;overflow:hidden}
+.stage h1,.stage h2,.stage h3,.stage p{margin:0}
+.stage ul{margin:0;padding-left:1.2em}
+.stage table{border-collapse:collapse;width:100%}
+.stage td,.stage th{padding:16px 20px;text-align:left;border-bottom:1px solid #E5E5E7}
+.stage svg{display:block}
+</style>
+</head>
+<body>
+<div class="frame"><div class="stage"><section id="cover" data-transition="fade" style="background:#0D0A40;color:#F6F5FE;font-family:'Geist', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+<svg aria-label="Rising step shape, the brand motif" style="position:absolute;left:1000px;top:200px;width:792px;height:752px" width="792" height="752" viewBox="0 0 792 752" xmlns="http://www.w3.org/2000/svg">
+<g stroke="#2A2470" stroke-width="2"><line x1="0" y1="152" x2="792" y2="152"/><line x1="0" y1="302" x2="792" y2="302"/><line x1="0" y1="452" x2="792" y2="452"/><line x1="0" y1="602" x2="792" y2="602"/></g>
+<path d="M0,752 H132 V602 H264 V512 H396 V422 H528 V302 H660 V152 H792 V752 Z" fill="#1E176B"/>
+<path d="M0,752 H132 V602 H264 V512 H396 V422" fill="none" stroke="#5F46FF" stroke-width="8"/>
+<path d="M396,422 H528 V302 H660 V152 H792" fill="none" stroke="#5F46FF" stroke-width="4" stroke-dasharray="14 12"/>
+<circle cx="396" cy="422" r="16" fill="#F6F5FE"/>
+</svg>
+<p style="font-size:28px;color:#B9AEFF">Application for Brand Designer</p>
+<div style="display:flex;flex-direction:column;gap:40px;width:860px">
+<h1 style="font-size:120px;font-weight:600;line-height:1.02;letter-spacing:-4px;color:#F6F5FE">EquityList brand kit</h1>
+<p style="font-size:32px;line-height:1.45;color:#C9C3F2">An audit of the current brand, a small kit, and a detailed take on the vesting chart.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:32px;font-weight:600;color:#F6F5FE">Sneha Baid</p>
+<p style="font-size:24px;color:#9A93CF">Spec work. I'm not affiliated with EquityList and nobody there asked for this.</p>
+</div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="thesis" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;gap:128px">
+<div style="flex:1;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">Why I made this</p>
+<p style="font-size:44px;font-weight:500;line-height:1.3;letter-spacing:-1px;color:#131314">Your job post asks for someone who can turn equity concepts into clear visuals for enterprise audiences. A cover letter can't really show that, so I tried it on your brand instead.</p>
+<p style="font-size:28px;line-height:1.5;color:#4A4A52">I went through equitylist.co, the customer stories and the live stylesheet. Everything in the audit comes from there. The deep dive is my own proposal, with made-up numbers on a sample grant.</p>
+</div>
+<div style="width:520px;display:flex;flex-direction:column;gap:0px;border-top:2px solid #131314">
+<div style="display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid #E5E5E7"><p style="font-size:28px">What's there today</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">03</p></div>
+<div style="display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid #E5E5E7"><p style="font-size:28px">The kit</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">06</p></div>
+<div style="display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid #E5E5E7"><p style="font-size:28px;font-weight:600;color:#5F46FF">The vesting chart</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF">10</p></div>
+<div style="display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid #E5E5E7"><p style="font-size:28px">About me</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">23</p></div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Sneha Baid / EquityList spec</p><p style="font-size:24px">02</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="audit-voice" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">What's there today</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">The copy is already good</h2>
+</div>
+<div style="display:flex;gap:96px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:44px;font-weight:600;line-height:1.2;letter-spacing:-1px;color:#4F3AD9;border-left:6px solid #5F46FF;padding:0 0 0 32px">“A buyback shouldn't need a new spreadsheet.”</p>
+<div style="display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;gap:24px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:56px">01</p><p style="font-size:28px;line-height:1.4;color:#3A3A40;flex:1"><b>Short and sure.</b> Declarative sentences, almost no hedging.</p></div>
+<div style="display:flex;gap:24px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:56px">02</p><p style="font-size:28px;line-height:1.4;color:#3A3A40;flex:1"><b>Spreadsheets as the foil.</b> The old way gets named once, then dropped.</p></div>
+<div style="display:flex;gap:24px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:56px">03</p><p style="font-size:28px;line-height:1.4;color:#3A3A40;flex:1"><b>Precise words.</b> Ledger, deterministic, grounded. The visuals don't fully back this up yet.</p></div>
+</div>
+</div>
+<div style="width:640px;display:grid;grid-template-columns:repeat(2, 1fr);gap:24px;align-content:start">
+<div style="background:#F6F5FE;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:8px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:64px;font-weight:500;letter-spacing:-2px;color:#131314">650+</p><p style="font-size:24px;color:#6B6B70">companies</p></div>
+<div style="background:#F6F5FE;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:8px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:64px;font-weight:500;letter-spacing:-2px;color:#131314">80K+</p><p style="font-size:24px;color:#6B6B70">stakeholders</p></div>
+<div style="background:#F6F5FE;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:8px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:64px;font-weight:500;letter-spacing:-2px;color:#131314">$20B+</p><p style="font-size:24px;color:#6B6B70">securities managed</p></div>
+<div style="background:#F6F5FE;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:8px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:64px;font-weight:500;letter-spacing:-2px;color:#131314">16</p><p style="font-size:24px;color:#6B6B70">countries</p></div>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Source: equitylist.co homepage, Oct 2026</p><p style="font-size:24px">03</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="audit-code" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">What's there today</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">I counted what the live CSS uses</h2>
+</div>
+<div style="display:flex;gap:96px">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px">
+<p style="font-size:28px;font-weight:600;color:#131314">Colors, by number of declarations</p>
+<div style="display:flex;gap:16px;align-items:center"><div style="width:32px;height:32px;border-radius:6px;background:#131314"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;width:130px">#131314</p><div style="width:340px;height:24px;border-radius:4px;background:#131314"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">341</p></div>
+<div style="display:flex;gap:16px;align-items:center"><div style="width:32px;height:32px;border-radius:6px;background:#5F46FF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;width:130px">#5F46FF</p><div style="width:211px;height:24px;border-radius:4px;background:#5F46FF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">212</p></div>
+<div style="display:flex;gap:16px;align-items:center"><div style="width:32px;height:32px;border-radius:6px;background:#E5E5E7;border:1px solid #C9C9CE"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;width:130px">#E5E5E7</p><div style="width:209px;height:24px;border-radius:4px;background:#D4D4D8"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">210</p></div>
+<div style="display:flex;gap:16px;align-items:center"><div style="width:32px;height:32px;border-radius:6px;background:#6B6B70"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;width:130px">#6B6B70</p><div style="width:204px;height:24px;border-radius:4px;background:#6B6B70"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">205</p></div>
+<div style="display:flex;gap:16px;align-items:center"><div style="width:32px;height:32px;border-radius:6px;background:#0D0A40"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;width:130px">#0D0A40</p><div style="width:63px;height:24px;border-radius:4px;background:#0D0A40"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">63</p></div>
+<div style="display:flex;gap:16px;align-items:center"><div style="width:32px;height:32px;border-radius:6px;background:#635BFF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;width:130px">#635BFF</p><div style="width:43px;height:24px;border-radius:4px;background:#635BFF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">43</p></div>
+<div style="display:flex;gap:16px;align-items:center"><div style="width:32px;height:32px;border-radius:6px;background:#1E7A46"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;width:130px">#1E7A46</p><div style="width:35px;height:24px;border-radius:4px;background:#1E7A46"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">35</p></div>
+<div style="display:flex;gap:16px;align-items:center"><div style="width:32px;height:32px;border-radius:6px;background:#4F3AD9"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;width:130px">#4F3AD9</p><div style="width:28px;height:24px;border-radius:4px;background:#4F3AD9"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">28</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px">
+<p style="font-size:28px;font-weight:600;color:#131314">Typefaces, by number of declarations</p>
+<div style="display:flex;gap:16px;align-items:center"><p style="font-size:24px;width:210px">Geist</p><div style="width:380px;height:24px;border-radius:4px;background:#5F46FF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">426</p></div>
+<div style="display:flex;gap:16px;align-items:center"><p style="font-size:24px;width:210px">Inter</p><div style="width:202px;height:24px;border-radius:4px;background:#B9AEFF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">226</p></div>
+<div style="display:flex;gap:16px;align-items:center"><p style="font-size:24px;width:210px">Zalando Sans</p><div style="width:51px;height:24px;border-radius:4px;background:#B9AEFF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">57</p></div>
+<div style="display:flex;gap:16px;align-items:center"><p style="font-size:24px;width:210px">Geist Mono</p><div style="width:38px;height:24px;border-radius:4px;background:#5F46FF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">43</p></div>
+<div style="display:flex;gap:16px;align-items:center"><p style="font-size:24px;width:210px">Poppins</p><div style="width:23px;height:24px;border-radius:4px;background:#B9AEFF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">26</p></div>
+<div style="display:flex;gap:16px;align-items:center"><p style="font-size:24px;width:210px">Space Grotesk</p><div style="width:20px;height:24px;border-radius:4px;background:#B9AEFF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">22</p></div>
+<div style="display:flex;gap:16px;align-items:center"><p style="font-size:24px;width:210px">Open Sans</p><div style="width:13px;height:24px;border-radius:4px;background:#B9AEFF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">15</p></div>
+<div style="display:flex;gap:16px;align-items:center"><p style="font-size:24px;width:210px">Varela</p><div style="width:4px;height:24px;border-radius:2px;background:#B9AEFF"></div><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">3</p></div>
+<p style="font-size:24px;color:#4F3AD9;padding:12px 0 0 0">Dark bars: keep. Light bars: probably leftovers.</p>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Counted from the shared Webflow stylesheet, Oct 2026. Some rules may serve legacy pages.</p><p style="font-size:24px">04</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="audit-findings" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">What's there today</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">What I'd clean up first</h2>
+</div>
+<div style="display:flex;gap:32px;flex:1">
+<div style="flex:1;background:#FFFFFF;border:1px solid #E5E5E7;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF">01 · Type</p>
+<h3 style="font-size:40px;font-weight:600;line-height:1.15;letter-spacing:-1px">Eight typefaces, one brand</h3>
+<p style="font-size:26px;line-height:1.45;color:#3A3A40">Geist is clearly the system. Inter, Poppins, Space Grotesk, Zalando Sans, Open Sans and Varela are drift from old pages and embeds.</p>
+<div style="flex:1"></div>
+<p style="font-size:26px;line-height:1.4;color:#131314;background:#F6F5FE;border-radius:12px;padding:20px 24px"><b>Fix:</b> Geist for words, Geist Mono for numbers. Nothing else.</p>
+</div>
+<div style="flex:1;background:#FFFFFF;border:1px solid #E5E5E7;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF">02 · Color</p>
+<h3 style="font-size:40px;font-weight:600;line-height:1.15;letter-spacing:-1px">Four near-identical violets</h3>
+<div style="display:flex;gap:12px">
+<div style="flex:1;height:56px;border-radius:8px;background:#5F46FF"></div><div style="flex:1;height:56px;border-radius:8px;background:#635BFF"></div><div style="flex:1;height:56px;border-radius:8px;background:#6D4DFF"></div><div style="flex:1;height:56px;border-radius:8px;background:#4F3AD9"></div>
+</div>
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">5F46FF 635BFF 6D4DFF 4F3AD9</p>
+<p style="font-size:26px;line-height:1.45;color:#3A3A40">All four are in use. Side by side, it's hard to say which one is the brand.</p>
+<div style="flex:1"></div>
+<p style="font-size:26px;line-height:1.4;color:#131314;background:#F6F5FE;border-radius:12px;padding:20px 24px"><b>Fix:</b> one brand violet, one pressed state, tints by token.</p>
+</div>
+<div style="flex:1;background:#FFFFFF;border:1px solid #E5E5E7;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF">03 · Numbers</p>
+<h3 style="font-size:40px;font-weight:600;line-height:1.15;letter-spacing:-1px">Two customer counts</h3>
+<p style="font-size:26px;line-height:1.45;color:#3A3A40">The site says 650+ companies. The Wellfound listing says 550+. Small thing, but numbers are what EquityList sells.</p>
+<div style="flex:1"></div>
+<p style="font-size:26px;line-height:1.4;color:#131314;background:#F6F5FE;border-radius:12px;padding:20px 24px"><b>Fix:</b> one dated stats sheet that every asset pulls from.</p>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Sneha Baid / EquityList spec</p><p style="font-size:24px">05</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="kit-color" data-section="The kit: color, type, voice and the step motif" data-transition="fade" style="background:#F6F5FE;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The kit</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Ten colors, each with one job</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(5, 1fr);gap:24px">
+<div style="background:#FFFFFF;border-radius:16px;overflow:hidden;display:flex;flex-direction:column"><div style="height:64px;background:#5F46FF"></div><div style="padding:20px 24px;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600">Violet 500</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">#5F46FF</p><p style="font-size:24px;line-height:1.35;color:#3A3A40">Brand, actions, vested</p></div></div>
+<div style="background:#FFFFFF;border-radius:16px;overflow:hidden;display:flex;flex-direction:column"><div style="height:64px;background:#4F3AD9"></div><div style="padding:20px 24px;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600">Violet 700</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">#4F3AD9</p><p style="font-size:24px;line-height:1.35;color:#3A3A40">Pressed, text on tints</p></div></div>
+<div style="background:#FFFFFF;border-radius:16px;overflow:hidden;display:flex;flex-direction:column"><div style="height:64px;background:#EDE9FE"></div><div style="padding:20px 24px;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600">Violet 100</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">#EDE9FE</p><p style="font-size:24px;line-height:1.35;color:#3A3A40">Unvested, selection</p></div></div>
+<div style="background:#FFFFFF;border-radius:16px;overflow:hidden;display:flex;flex-direction:column"><div style="height:64px;background:#0D0A40"></div><div style="padding:20px 24px;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600">Night</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">#0D0A40</p><p style="font-size:24px;line-height:1.35;color:#3A3A40">Dark surfaces, founders</p></div></div>
+<div style="background:#FFFFFF;border-radius:16px;overflow:hidden;display:flex;flex-direction:column"><div style="height:64px;background:#131314"></div><div style="padding:20px 24px;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600">Ink</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">#131314</p><p style="font-size:24px;line-height:1.35;color:#3A3A40">Text, axes</p></div></div>
+<div style="background:#FFFFFF;border-radius:16px;overflow:hidden;display:flex;flex-direction:column"><div style="height:64px;background:#6B6B70"></div><div style="padding:20px 24px;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600">Slate</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">#6B6B70</p><p style="font-size:24px;line-height:1.35;color:#3A3A40">Secondary text</p></div></div>
+<div style="background:#FFFFFF;border-radius:16px;overflow:hidden;display:flex;flex-direction:column"><div style="height:64px;background:#E5E5E7"></div><div style="padding:20px 24px;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600">Line</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">#E5E5E7</p><p style="font-size:24px;line-height:1.35;color:#3A3A40">Rules, grid, borders</p></div></div>
+<div style="background:#FFFFFF;border-radius:16px;overflow:hidden;display:flex;flex-direction:column"><div style="height:64px;background:#F6F5FE;border-bottom:1px solid #E5E5E7"></div><div style="padding:20px 24px;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600">Lavender</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">#F6F5FE</p><p style="font-size:24px;line-height:1.35;color:#3A3A40">Quiet surface</p></div></div>
+<div style="background:#FFFFFF;border-radius:16px;overflow:hidden;display:flex;flex-direction:column"><div style="height:64px;background:linear-gradient(90deg, #1E7A46 50%, #EAF7EF 50%)"></div><div style="padding:20px 24px;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600">Gain</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">#1E7A46</p><p style="font-size:24px;line-height:1.35;color:#3A3A40">Exercised, value up</p></div></div>
+<div style="background:#FFFFFF;border-radius:16px;overflow:hidden;display:flex;flex-direction:column"><div style="height:64px;background:linear-gradient(90deg, #8A5A00 50%, #FFF6E0 50%)"></div><div style="padding:20px 24px;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600">Caution</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">#8A5A00</p><p style="font-size:24px;line-height:1.35;color:#3A3A40">Expiring, act soon</p></div></div>
+</div>
+<p style="font-size:26px;line-height:1.4;color:#4F3AD9">All text pairs pass 4.5:1. I left red out: an expiring grant needs a nudge, not an alarm.</p>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Built from colors already in EquityList's CSS</p><p style="font-size:24px">06</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="kit-type" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The kit</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Two typefaces instead of eight</h2>
+</div>
+<div style="display:flex;gap:96px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;gap:32px;align-items:baseline;border-bottom:1px solid #E5E5E7;padding:0 0 12px 0"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70;width:150px">120 / 600</p><p style="font-size:120px;font-weight:600;line-height:1;letter-spacing:-4px">Own it.</p></div>
+<div style="display:flex;gap:32px;align-items:baseline;border-bottom:1px solid #E5E5E7;padding:0 0 12px 0"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70;width:150px">72 / 600</p><p style="font-size:72px;font-weight:600;line-height:1.05;letter-spacing:-2px">Headline</p></div>
+<div style="display:flex;gap:32px;align-items:baseline;border-bottom:1px solid #E5E5E7;padding:0 0 12px 0"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70;width:150px">44 / 600</p><p style="font-size:44px;font-weight:600;line-height:1.1">Card title</p></div>
+<div style="display:flex;gap:32px;align-items:baseline;border-bottom:1px solid #E5E5E7;padding:0 0 12px 0"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70;width:150px">32 / 400</p><p style="font-size:32px;line-height:1.4">Body text for decks and posts</p></div>
+<div style="display:flex;gap:32px;align-items:baseline"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70;width:150px">24 / 400</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;letter-spacing:2px;text-transform:uppercase;color:#5F46FF">Label · eyebrow</p></div>
+</div>
+<div style="width:640px;background:#0D0A40;border-radius:24px;padding:48px;display:flex;flex-direction:column;gap:20px">
+<p style="font-size:26px;font-weight:600;color:#B9AEFF">Geist Mono, for every number</p>
+<div style="display:flex;flex-direction:column;gap:8px;font-family:'Geist Mono', 'Courier New', monospace;color:#F6F5FE">
+<p style="font-size:44px;font-variant-numeric:tabular-nums;text-align:right">₹4,82,00,000</p>
+<p style="font-size:44px;font-variant-numeric:tabular-nums;text-align:right">$580,000</p>
+<p style="font-size:44px;font-variant-numeric:tabular-nums;text-align:right">12.50%</p>
+<p style="font-size:44px;font-variant-numeric:tabular-nums;text-align:right">4,800 opts</p>
+</div>
+<div style="flex:1"></div>
+<p style="font-size:26px;line-height:1.45;color:#C9C3F2">Lakh and crore grouping for India, thousands for every other region. Set by the region selector, never mixed in one asset.</p>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Five sizes cover every deck, post and one-pager</p><p style="font-size:24px">07</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="kit-voice" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The kit</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">How labels and captions should read</h2>
+</div>
+<table style="font-family:'Geist', Arial, sans-serif;font-size:26px;color:#131314;padding:16px 20px">
+<tr style="background:#0D0A40"><th style="width:26%;color:#F6F5FE">Principle</th><th style="width:37%;color:#F6F5FE">Write this</th><th style="width:37%;color:#F6F5FE">Not this</th></tr>
+<tr style="background:#FFFFFF"><td>Lead with the number</td><td style="color:#4F3AD9">2,000 of 4,800 options vested</td><td style="color:#6B6B70">You're making great progress!</td></tr>
+<tr style="background:#F6F5FE"><td>Name the old way once</td><td style="color:#4F3AD9">Your cap table, minus the shared Excel file</td><td style="color:#6B6B70">Revolutionizing equity management</td></tr>
+<tr style="background:#FFFFFF"><td>Plain over legal</td><td style="color:#4F3AD9">You can buy these shares until 12 Mar 2027</td><td style="color:#6B6B70">Exercise window subject to plan terms</td></tr>
+<tr style="background:#F6F5FE"><td>Calm about deadlines</td><td style="color:#4F3AD9">3 grants expire in 30 days. Review them.</td><td style="color:#6B6B70">URGENT: action required!!</td></tr>
+<tr style="background:#FFFFFF"><td>Date every claim</td><td style="color:#4F3AD9">650+ companies, as of Oct 2026</td><td style="color:#6B6B70">Hundreds of companies trust us</td></tr>
+</table>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Voice rules for headlines, chart labels and captions</p><p style="font-size:24px">08</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="kit-motif" data-transition="fade" style="background:#F6F5FE;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The kit</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Using the vesting step as a shape</h2>
+</div>
+<div style="display:flex;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#FFFFFF;border-radius:20px;padding:32px;display:flex;justify-content:center">
+<svg aria-label="A hairline divider with one small step in it" width="440" height="220" viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,140 H200 V80 H440" fill="none" stroke="#5F46FF" stroke-width="4"/>
+<line x1="0" y1="180" x2="440" y2="180" stroke="#E5E5E7" stroke-width="2"/>
+<circle cx="200" cy="80" r="8" fill="#5F46FF"/>
+</svg>
+</div>
+<h3 style="font-size:32px;font-weight:600">As a divider</h3>
+<p style="font-size:26px;line-height:1.4;color:#3A3A40">One step in a hairline separates sections in decks and long posts.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#FFFFFF;border-radius:20px;padding:32px;display:flex;justify-content:center">
+<svg aria-label="A post frame whose violet base rises in steps" width="440" height="220" viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="440" height="220" rx="12" fill="#0D0A40"/>
+<path d="M0,220 V180 H110 V150 H220 V115 H330 V75 H440 V220 Z" fill="#5F46FF"/>
+<rect x="28" y="28" width="200" height="16" rx="4" fill="#F6F5FE"/>
+<rect x="28" y="56" width="140" height="16" rx="4" fill="#9A93CF"/>
+</svg>
+</div>
+<h3 style="font-size:32px;font-weight:600">As a frame</h3>
+<p style="font-size:26px;line-height:1.4;color:#3A3A40">The base of a social post or cover rises left to right behind the headline.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="background:#FFFFFF;border-radius:20px;padding:32px;display:flex;justify-content:center">
+<svg aria-label="A vesting step chart with a cliff and monthly steps" width="440" height="220" viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg">
+<line x1="0" y1="200" x2="440" y2="200" stroke="#131314" stroke-width="2"/>
+<path d="M0,200 H110 V150 H140 V136 H170 V122 H200 V108 H230 V94 V200 Z" fill="#5F46FF"/>
+<path d="M230,94 H260 V80 H290 V66 H320 V52 H350 V38 H380 V24 H410 V10 H440 V200 H230 Z" fill="#EDE9FE"/>
+<path d="M0,200 H110 V150 H140 V136 H170 V122 H200 V108 H230 V94 H260 V80 H290 V66 H320 V52 H350 V38 H380 V24 H410 V10 H440" fill="none" stroke="#4F3AD9" stroke-width="3"/>
+</svg>
+</div>
+<h3 style="font-size:32px;font-weight:600">As data</h3>
+<p style="font-size:26px;line-height:1.4;color:#3A3A40">It's the vesting chart. So a post and the product look like the same company.</p>
+</div>
+</div>
+<p style="font-size:26px;line-height:1.4;color:#4F3AD9">Two rules: steps only go up, left to right. If a number sits next to one, it's to scale.</p>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Sneha Baid / EquityList spec</p><p style="font-size:24px">09</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="deep-cover" data-transition="fade" style="background:#5F46FF;color:#FAFAFB;font-family:'Geist', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<svg aria-label="" style="position:absolute;left:0px;top:640px;width:1920px;height:440px" width="1920" height="440" viewBox="0 0 1920 440" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,440 V380 H240 V340 H480 V290 H720 V240 H960 V180 H1200 V130 H1440 V80 H1680 V30 H1920 V440 Z" fill="#4F3AD9"/>
+</svg>
+<p style="font-size:28px;color:#EDE9FE">Deep dive</p>
+<h1 style="font-size:120px;font-weight:600;line-height:1.02;letter-spacing:-4px;color:#FAFAFB;width:1300px">The vesting chart</h1>
+<p style="font-size:32px;line-height:1.45;color:#F6F5FE;width:1100px">If I could only design one thing first, it would be this. Employees open it more than any other screen, and the same chart keeps showing up in sales decks and LinkedIn posts.</p>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="deep-problem" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The vesting chart</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Three people read it, for different reasons</h2>
+</div>
+<div style="display:flex;flex-direction:column;border-top:2px solid #131314">
+<div style="display:flex;gap:48px;padding:32px 0;border-bottom:1px solid #E5E5E7;align-items:baseline"><p style="font-size:32px;font-weight:600;width:360px">Employees</p><p style="font-size:32px;color:#4F3AD9;flex:1">What do I own today, and when do I get the rest?</p><p style="font-size:24px;color:#6B6B70;width:400px">80,000+ stakeholders on the platform</p></div>
+<div style="display:flex;gap:48px;padding:32px 0;border-bottom:1px solid #E5E5E7;align-items:baseline"><p style="font-size:32px;font-weight:600;width:360px">People teams</p><p style="font-size:32px;color:#4F3AD9;flex:1">Can someone get this without booking a call with me?</p><p style="font-size:24px;color:#6B6B70;width:400px">Every testimonial on the site is from a People or HR lead</p></div>
+<div style="display:flex;gap:48px;padding:32px 0;border-bottom:1px solid #E5E5E7;align-items:baseline"><p style="font-size:32px;font-weight:600;width:360px">Finance, founders</p><p style="font-size:32px;color:#4F3AD9;flex:1">Is this number exactly right?</p><p style="font-size:24px;color:#6B6B70;width:400px">Exact ownership math is the core promise</p></div>
+</div>
+<p style="font-size:28px;line-height:1.5;color:#3A3A40;width:1300px">Two of those People leads, at Nova Benefits and Leap Finance, say EquityList made ESOPs feel real to their employees. That's mostly this one chart doing the work.</p>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Sneha Baid / EquityList spec</p><p style="font-size:24px">11</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="deep-anatomy" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<svg aria-label="Vesting step chart: nothing for 12 months, a cliff of 1,200 options, then 100 options a month to 4,800 at month 48. Today, at month 20, 2,000 are vested." style="position:absolute;left:128px;top:312px;width:1120px;height:560px" width="1120" height="560" viewBox="0 0 1120 560" xmlns="http://www.w3.org/2000/svg">
+<g stroke="#E5E5E7" stroke-width="2"><line x1="60" y1="40" x2="1060" y2="40"/><line x1="60" y1="155" x2="1060" y2="155"/><line x1="60" y1="270" x2="1060" y2="270"/><line x1="60" y1="385" x2="1060" y2="385"/></g>
+<g stroke="#D4D4D8" stroke-width="2" stroke-dasharray="6 8"><line x1="310" y1="40" x2="310" y2="500"/><line x1="560" y1="40" x2="560" y2="500"/><line x1="810" y1="40" x2="810" y2="500"/><line x1="1060" y1="40" x2="1060" y2="500"/></g>
+<path d="M60,500 H310 V385 h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58 V500 Z" fill="#EDE9FE"/>
+<path d="M60,500 H310 V385 h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58 V500 Z" fill="#5F46FF"/>
+<path d="M60,500 H310 V385 h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58h20.83v-9.58" fill="none" stroke="#4F3AD9" stroke-width="3" stroke-dasharray="10 6"/>
+<line x1="476.67" y1="30" x2="476.67" y2="500" stroke="#131314" stroke-width="2"/>
+<line x1="60" y1="500" x2="1060" y2="500" stroke="#131314" stroke-width="3"/>
+</svg>
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The vesting chart</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">How I'd draw it, piece by piece</h2>
+</div>
+<p style="position:absolute;left:164px;top:736px;width:48px;height:48px;border-radius:24px;background:#131314;color:#FAFAFB;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;line-height:2;text-align:center">1</p>
+<p style="position:absolute;left:376px;top:676px;width:48px;height:48px;border-radius:24px;background:#131314;color:#FAFAFB;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;line-height:2;text-align:center">2</p>
+<p style="position:absolute;left:790px;top:420px;width:48px;height:48px;border-radius:24px;background:#131314;color:#FAFAFB;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;line-height:2;text-align:center">3</p>
+<p style="position:absolute;left:520px;top:296px;width:48px;height:48px;border-radius:24px;background:#131314;color:#FAFAFB;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;line-height:2;text-align:center">4</p>
+<p style="position:absolute;left:1196px;top:376px;width:48px;height:48px;border-radius:24px;background:#131314;color:#FAFAFB;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;line-height:2;text-align:center">5</p>
+<p style="position:absolute;left:452px;top:732px;width:150px;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;line-height:1.2;color:#FAFAFB">2,000 vested</p>
+<p style="position:absolute;left:880px;top:720px;width:240px;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;line-height:1.2;color:#4F3AD9">2,800 unvested</p>
+<p style="position:absolute;left:128px;top:824px;width:120px;text-align:center;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">Grant</p>
+<p style="position:absolute;left:378px;top:824px;width:120px;text-align:center;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">12 mo</p>
+<p style="position:absolute;left:628px;top:824px;width:120px;text-align:center;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">24 mo</p>
+<p style="position:absolute;left:878px;top:824px;width:120px;text-align:center;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">36 mo</p>
+<p style="position:absolute;left:1128px;top:824px;width:120px;text-align:center;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">48 mo</p>
+<div style="position:absolute;left:1312px;top:312px;width:480px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-size:26px;font-weight:600">1  Grant date</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">9 Feb 2025. The clock starts. Nothing is owned yet.</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-size:26px;font-weight:600">2  One-year cliff</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">1,200 options (25%) vest at once, so it's drawn as a jump.</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-size:26px;font-weight:600">3  Monthly vesting</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">100 a month for 36 months. One step per vesting event.</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-size:26px;font-weight:600">4  Today</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">Always a date, never just "now". 2,000 vested as of 9 Oct 2026.</p></div>
+<div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-size:26px;font-weight:600">5  Fully vested</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">4,800 by 9 Feb 2029. Dashed means scheduled, not owned.</p></div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Sample grant: 4,800 options, 4 years, 1-year cliff. Numbers are made up.</p><p style="font-size:24px">12</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="deep-semantics" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The vesting chart</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Five states a grant can be in</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;height:88px">
+<div style="width:277px;background:#1E7A46;border-radius:12px 0 0 12px"></div>
+<div style="width:416px;background:#5F46FF"></div>
+<div style="flex:1;background:#EDE9FE;border:3px dashed #5F46FF;border-radius:0 12px 12px 0"></div>
+</div>
+<div style="display:flex">
+<div style="width:277px;display:flex;flex-direction:column;gap:2px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:32px;color:#1E7A46">800</p><p style="font-size:24px;color:#3A3A40">exercised</p></div>
+<div style="width:416px;display:flex;flex-direction:column;gap:2px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:32px;color:#4F3AD9">1,200</p><p style="font-size:24px;color:#3A3A40">vested, not exercised</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:2px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:32px;color:#4F3AD9">2,800</p><p style="font-size:24px;color:#3A3A40">unvested, of 4,800 total</p></div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(5, 1fr);gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;border-top:6px solid #5F46FF;padding:20px 0 0 0"><h3 style="font-size:30px;font-weight:600">Vested</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">Yours. You can buy these. Solid violet.</p></div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:6px dashed #5F46FF;padding:20px 0 0 0"><h3 style="font-size:30px;font-weight:600">Unvested</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">Scheduled, not yours yet. Pale fill, dashed edge.</p></div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:6px solid #1E7A46;padding:20px 0 0 0"><h3 style="font-size:30px;font-weight:600">Exercised</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">Bought. Now actual shares. Green.</p></div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:6px solid #8A5A00;padding:20px 0 0 0"><h3 style="font-size:30px;font-weight:600">Expiring</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">Window closing. Amber tag with the date.</p></div>
+<div style="display:flex;flex-direction:column;gap:12px;border-top:6px solid #B5B5BA;padding:20px 0 0 0"><h3 style="font-size:30px;font-weight:600">Lapsed</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">Gone. Gray, kept in history, never hidden.</p></div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Every segment carries its count, so it still works in grayscale</p><p style="font-size:24px">13</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="deep-grammar" data-transition="fade" style="background:#F6F5FE;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The vesting chart</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Rules I'd apply to every equity chart</h2>
+</div>
+<div style="display:flex;gap:96px">
+<div style="flex:1;display:flex;flex-direction:column;border-top:2px solid #131314">
+<div style="display:flex;gap:24px;padding:28px 0;border-bottom:1px solid #D9D6EE"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:48px">1</p><div style="flex:1;display:flex;flex-direction:column;gap:6px"><h3 style="font-size:32px;font-weight:600">Steps, not curves</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">Vesting is discrete. A smooth curve shows options that don't exist yet.</p></div></div>
+<div style="display:flex;gap:24px;padding:28px 0;border-bottom:1px solid #D9D6EE"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:48px">2</p><div style="flex:1;display:flex;flex-direction:column;gap:6px"><h3 style="font-size:32px;font-weight:600">Labels on the data</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">No legends. People shouldn't have to match colors to a key.</p></div></div>
+<div style="display:flex;gap:24px;padding:28px 0;border-bottom:1px solid #D9D6EE"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:48px">3</p><div style="flex:1;display:flex;flex-direction:column;gap:6px"><h3 style="font-size:32px;font-weight:600">Numbers in Geist Mono</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">Tabular figures, right-aligned, so columns line up.</p></div></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;border-top:2px solid #131314">
+<div style="display:flex;gap:24px;padding:28px 0;border-bottom:1px solid #D9D6EE"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:48px">4</p><div style="flex:1;display:flex;flex-direction:column;gap:6px"><h3 style="font-size:32px;font-weight:600">A date on every number</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">"2,000 vested as of 9 Oct 2026", not "2,000 vested".</p></div></div>
+<div style="display:flex;gap:24px;padding:28px 0;border-bottom:1px solid #D9D6EE"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:48px">5</p><div style="flex:1;display:flex;flex-direction:column;gap:6px"><h3 style="font-size:32px;font-weight:600">Axis starts at zero</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">A cropped axis makes a small grant look big. Never do it.</p></div></div>
+<div style="display:flex;gap:24px;padding:28px 0;border-bottom:1px solid #D9D6EE"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:48px">6</p><div style="flex:1;display:flex;flex-direction:column;gap:6px"><h3 style="font-size:32px;font-weight:600">Value as a range</h3><p style="font-size:24px;line-height:1.4;color:#3A3A40">Potential value is a band with its 409A date and source, not one big number.</p></div></div>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Sneha Baid / EquityList spec</p><p style="font-size:24px">14</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="deep-captable" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The vesting chart, zoomed out</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Dilution as squares, not a pie</h2>
+</div>
+<div style="display:flex;gap:80px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-size:28px;font-weight:600">Before Series A</p>
+<svg aria-label="10 by 10 grid. Founders 60 squares, seed investors 25, ESOP pool 15." width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern id="pf" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="34" height="34" rx="4" fill="#0D0A40"/></pattern>
+<pattern id="pi" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="34" height="34" rx="4" fill="#C9C1FF"/></pattern>
+<pattern id="pe" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="34" height="34" rx="4" fill="#5F46FF"/></pattern>
+</defs>
+<rect x="0" y="0" width="400" height="240" fill="url(#pf)"/>
+<rect x="0" y="240" width="400" height="80" fill="url(#pi)"/>
+<rect x="0" y="320" width="200" height="40" fill="url(#pi)"/>
+<rect x="200" y="320" width="200" height="40" fill="url(#pe)"/>
+<rect x="0" y="360" width="400" height="40" fill="url(#pe)"/>
+</svg>
+<div style="display:flex;flex-direction:column;gap:6px;font-size:24px">
+<p style="font-size:24px"><span style="color:#0D0A40"><b>60%</b></span> founders</p>
+<p style="font-size:24px"><span style="color:#6B5BD6"><b>25%</b></span> seed investors</p>
+<p style="font-size:24px"><span style="color:#5F46FF"><b>15%</b></span> ESOP pool</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-size:28px;font-weight:600">After Series A</p>
+<svg aria-label="10 by 10 grid. Founders 48 squares, seed 20, ESOP pool 12, Series A 20." width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern id="qf" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="34" height="34" rx="4" fill="#0D0A40"/></pattern>
+<pattern id="qi" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="34" height="34" rx="4" fill="#C9C1FF"/></pattern>
+<pattern id="qe" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="34" height="34" rx="4" fill="#5F46FF"/></pattern>
+<pattern id="qa" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="34" height="34" rx="4" fill="#F2B544"/></pattern>
+</defs>
+<rect x="0" y="0" width="400" height="160" fill="url(#qf)"/>
+<rect x="0" y="160" width="320" height="40" fill="url(#qf)"/>
+<rect x="320" y="160" width="80" height="40" fill="url(#qi)"/>
+<rect x="0" y="200" width="400" height="40" fill="url(#qi)"/>
+<rect x="0" y="240" width="320" height="40" fill="url(#qi)"/>
+<rect x="320" y="240" width="80" height="40" fill="url(#qe)"/>
+<rect x="0" y="280" width="400" height="40" fill="url(#qe)"/>
+<rect x="0" y="320" width="400" height="80" fill="url(#qa)"/>
+</svg>
+<div style="display:flex;flex-direction:column;gap:6px">
+<p style="font-size:24px"><span style="color:#0D0A40"><b>48%</b></span> founders</p>
+<p style="font-size:24px"><span style="color:#6B5BD6"><b>20%</b></span> seed investors</p>
+<p style="font-size:24px"><span style="color:#5F46FF"><b>12%</b></span> ESOP pool</p>
+<p style="font-size:24px"><span style="color:#8A5A00"><b>20%</b></span> Series A</p>
+</div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:28px;padding:56px 0 0 0">
+<p style="font-size:32px;line-height:1.45;color:#131314">One square is 1%. You can count them, which you can't do with pie slices.</p>
+<p style="font-size:28px;line-height:1.5;color:#3A3A40">The ESOP pool going from 15 to 12 squares is the thing employees care about. In a pie, that change is almost invisible.</p>
+<p style="font-size:28px;line-height:1.5;color:#3A3A40">Same colors as the vesting chart: violet is always the employee pool.</p>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Made-up cap table, rounded to whole percents</p><p style="font-size:24px">15</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="deep-formats" data-transition="fade" style="background:#E9E7F3;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#4F3AD9">The vesting chart</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">The same chart in three places</h2>
+</div>
+<div style="display:flex;gap:56px;align-items:end;justify-content:center">
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="width:380px;height:475px;background:#F6F5FE;border-radius:12px;padding:36px;display:flex;flex-direction:column;gap:20px;box-shadow:0 12px 32px rgba(13,10,64,0.12)">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">2 / 6</p>
+<p style="font-size:36px;font-weight:600;line-height:1.15;letter-spacing:-1px;color:#131314">What a one-year cliff actually means</p>
+<div style="flex:1"></div>
+<svg aria-label="Small step chart with a cliff at one year" width="308" height="150" viewBox="0 0 308 150" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,148 H77 V112 H96 V100 H115 V88 H134 V76 H153 V64 H172 V52 H191 V40 H210 V28 H229 V16 H248 V4 H308 V148 Z" fill="#EDE9FE"/>
+<path d="M0,148 H77 V112 H96 V100 H115 V148 Z" fill="#5F46FF"/>
+<line x1="0" y1="148" x2="308" y2="148" stroke="#131314" stroke-width="2"/>
+</svg>
+<p style="font-size:24px;color:#6B6B70">EquityList</p>
+</div>
+<p style="font-size:24px;font-weight:600">LinkedIn carousel</p>
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">1080 × 1350</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="width:576px;height:324px;background:#0D0A40;border-radius:12px;padding:36px;display:flex;flex-direction:column;gap:24px;box-shadow:0 12px 32px rgba(13,10,64,0.18)">
+<p style="font-size:32px;font-weight:600;line-height:1.15;color:#F6F5FE">Every grant and its state, in one view</p>
+<div style="flex:1"></div>
+<div style="display:flex;height:48px">
+<div style="width:96px;background:#3BA56A;border-radius:6px 0 0 6px"></div>
+<div style="width:144px;background:#7A66FF"></div>
+<div style="flex:1;background:#2A2470;border:2px dashed #7A66FF;border-radius:0 6px 6px 0"></div>
+</div>
+<div style="display:flex;gap:40px;font-family:'Geist Mono', 'Courier New', monospace;color:#C9C3F2"><p style="font-size:24px">800</p><p style="font-size:24px">1,200</p><p style="font-size:24px">2,800</p></div>
+</div>
+<p style="font-size:24px;font-weight:600">Sales deck</p>
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">1920 × 1080, dark</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="width:400px;height:420px;background:#FFFFFF;border-radius:16px;border:1px solid #E5E5E7;padding:32px;display:flex;flex-direction:column;gap:16px;box-shadow:0 12px 32px rgba(13,10,64,0.10)">
+<p style="font-size:24px;color:#6B6B70">Your grant</p>
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:44px;color:#131314">2,000<span style="color:#9A9AA0"> / 4,800</span></p>
+<p style="font-size:24px;color:#3A3A40">vested as of 9 Oct 2026</p>
+<div style="display:flex;height:16px;border-radius:8px;overflow:hidden;background:#EDE9FE"><div style="width:140px;background:#5F46FF"></div></div>
+<div style="flex:1"></div>
+<div style="background:#F6F5FE;border-radius:10px;padding:16px 20px;display:flex;flex-direction:column;gap:4px"><p style="font-size:24px;color:#131314">Next: 100 options</p><p style="font-size:24px;color:#4F3AD9">on 9 Nov 2026</p></div>
+</div>
+<p style="font-size:24px;font-weight:600">Employee dashboard</p>
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">Product card</p>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Rough mockups, not final layouts</p><p style="font-size:24px">16</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="deep-system" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The vesting chart</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Templates, so sales never waits on me</h2>
+</div>
+<div style="display:flex;gap:0px;align-items:center">
+<div style="width:380px;background:#0D0A40;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:10px"><p style="font-size:24px;color:#B9AEFF">Figma variables</p><p style="font-size:30px;font-weight:600;line-height:1.25;color:#F6F5FE">Colors, type, chart states</p></div>
+<svg width="80" height="24" viewBox="0 0 80 24" style="flex:none"><line x1="4" y1="12" x2="66" y2="12" stroke="#5F46FF" stroke-width="3"/><path d="M62,4 L76,12 L62,20 Z" fill="#5F46FF"/></svg>
+<div style="width:380px;background:#5F46FF;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:10px"><p style="font-size:24px;color:#EDE9FE">Figma components</p><p style="font-size:30px;font-weight:600;line-height:1.25;color:#FAFAFB">Step chart, state bar, waffle</p></div>
+<svg width="80" height="24" viewBox="0 0 80 24" style="flex:none"><line x1="4" y1="12" x2="66" y2="12" stroke="#5F46FF" stroke-width="3"/><path d="M62,4 L76,12 L62,20 Z" fill="#5F46FF"/></svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px">
+<div style="background:#F6F5FE;border:1px solid #D9D6EE;border-radius:12px;padding:16px 24px"><p style="font-size:26px"><b>Canva brand kit</b> for sales and People teams</p></div>
+<div style="background:#F6F5FE;border:1px solid #D9D6EE;border-radius:12px;padding:16px 24px"><p style="font-size:26px"><b>Social templates</b> for carousels and posts</p></div>
+<div style="background:#F6F5FE;border:1px solid #D9D6EE;border-radius:12px;padding:16px 24px"><p style="font-size:26px"><b>Handoff</b> specs for product and engineering</p></div>
+</div>
+</div>
+<table style="font-size:26px;color:#131314;padding:14px 20px">
+<tr style="background:#EDE9FE"><th style="width:22%">Who</th><th style="width:39%">Can change</th><th style="width:39%">Can't change</th></tr>
+<tr style="background:#FFFFFF"><td>Sales</td><td>Numbers, customer logo, headline</td><td>Colors, chart shape, type</td></tr>
+<tr style="background:#FAFAFB"><td>People teams</td><td>Grant data in the explainer template</td><td>Labels and state colors</td></tr>
+<tr style="background:#FFFFFF"><td>Brand</td><td>Components and tokens</td><td>Stats without the dated sheet</td></tr>
+</table>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Sneha Baid / EquityList spec</p><p style="font-size:24px">17</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="deep-dodont" data-transition="fade" style="background:#F6F5FE;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">The vesting chart</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Mistakes I'd catch in review</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#FFFFFF;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px;border:2px solid #E5E5E7">
+<svg aria-label="Smooth curve rising from zero" width="460" height="130" viewBox="0 0 460 130" xmlns="http://www.w3.org/2000/svg"><path d="M0,125 C120,125 200,90 280,55 S420,8 460,5" fill="none" stroke="#B5B5BA" stroke-width="5"/><line x1="0" y1="127" x2="460" y2="127" stroke="#131314" stroke-width="2"/></svg>
+<p style="font-size:24px;color:#6B6B70"><b>Avoid:</b> a smooth curve hides the cliff</p>
+</div>
+<div style="background:#FFFFFF;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px;border:2px solid #5F46FF">
+<svg aria-label="Step chart with a clear cliff" width="460" height="130" viewBox="0 0 460 130" xmlns="http://www.w3.org/2000/svg"><path d="M0,125 H115 V95 H145 V83 H175 V71 H205 V59 H235 V47 H265 V35 H295 V23 H325 V11 H460" fill="none" stroke="#5F46FF" stroke-width="5"/><line x1="0" y1="127" x2="460" y2="127" stroke="#131314" stroke-width="2"/></svg>
+<p style="font-size:24px;color:#4F3AD9"><b>Use:</b> steps, cliff as a jump</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#FFFFFF;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px;border:2px solid #E5E5E7">
+<svg aria-label="Pie chart with four slices" width="460" height="130" viewBox="0 0 460 130" xmlns="http://www.w3.org/2000/svg"><circle cx="230" cy="65" r="62" fill="#C9C1FF"/><path d="M230,65 L230,3 A62,62 0 1,1 171,84 Z" fill="#0D0A40"/><path d="M230,65 L171,84 A62,62 0 0,1 183,25 Z" fill="#5F46FF"/></svg>
+<p style="font-size:24px;color:#6B6B70"><b>Avoid:</b> pies for small changes</p>
+</div>
+<div style="background:#FFFFFF;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px;border:2px solid #5F46FF">
+<svg aria-label="Grid of squares, countable" width="460" height="130" viewBox="0 0 460 130" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="d1" width="26" height="26" patternUnits="userSpaceOnUse"><rect width="22" height="22" rx="3" fill="#0D0A40"/></pattern><pattern id="d2" width="26" height="26" patternUnits="userSpaceOnUse"><rect width="22" height="22" rx="3" fill="#5F46FF"/></pattern><pattern id="d3" width="26" height="26" patternUnits="userSpaceOnUse"><rect width="22" height="22" rx="3" fill="#C9C1FF"/></pattern></defs><rect x="0" y="0" width="260" height="78" fill="url(#d1)"/><rect x="260" y="0" width="104" height="78" fill="url(#d2)"/><rect x="0" y="78" width="364" height="52" fill="url(#d3)"/></svg>
+<p style="font-size:24px;color:#4F3AD9"><b>Use:</b> squares you can count</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="background:#FFFFFF;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px;border:2px solid #E5E5E7">
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:44px;line-height:1.5;color:#9A9AA0">₹82L</p>
+<p style="font-size:24px;color:#6B6B70"><b>Avoid:</b> a big value, no date or source</p>
+</div>
+<div style="background:#FFFFFF;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px;border:2px solid #5F46FF">
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:44px;line-height:1.5;color:#131314">₹64–82L</p>
+<p style="font-size:24px;color:#4F3AD9"><b>Use:</b> a range, per 409A, 1 Sep 2026</p>
+</div>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Values are illustrative</p><p style="font-size:24px">18</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="content-ideas" data-transition="fade" style="background:#F6F5FE;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">Content ideas</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Six post series I'd want to start</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="height:140px;background:#0D0A40;border-radius:12px;padding:20px 24px;display:flex;align-items:end;justify-content:space-between">
+<p style="font-size:28px;font-weight:600;color:#F6F5FE">Cliff, explained</p>
+<svg aria-label="Small step chart" width="140" height="90" viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg"><path d="M0,88 H40 V60 H60 V48 H80 V36 H100 V24 H120 V12 H140" fill="none" stroke="#5F46FF" stroke-width="5"/></svg>
+</div>
+<h3 style="font-size:28px;font-weight:600">Equity, explained</h3>
+<p style="font-size:24px;line-height:1.4;color:#3A3A40">Monthly carousel. One concept, the vesting chart, five slides.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="height:140px;background:#FFFFFF;border:1px solid #E5E5E7;border-radius:12px;padding:20px 24px;display:flex;flex-direction:column;justify-content:center;gap:8px">
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:26px;color:#131314"><u>0.05% fully diluted</u></p>
+<p style="font-size:24px;color:#5F46FF">↳ what that actually means</p>
+</div>
+<h3 style="font-size:28px;font-weight:600">Offer letter decoder</h3>
+<p style="font-size:24px;line-height:1.4;color:#3A3A40">Annotated ESOP clauses. For candidates, and the People teams who field their questions.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="height:140px;background:#EDE9FE;border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:24px">
+<svg aria-label="Two small grids of squares" width="200" height="96" viewBox="0 0 200 96" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="c1" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="10" height="10" rx="2" fill="#0D0A40"/></pattern><pattern id="c2" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="10" height="10" rx="2" fill="#5F46FF"/></pattern><pattern id="c3" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="10" height="10" rx="2" fill="#F2B544"/></pattern></defs><rect x="0" y="0" width="84" height="72" fill="url(#c1)"/><rect x="0" y="72" width="84" height="24" fill="url(#c2)"/><rect x="112" y="0" width="84" height="48" fill="url(#c1)"/><rect x="112" y="48" width="84" height="24" fill="url(#c3)"/><rect x="112" y="72" width="84" height="24" fill="url(#c2)"/></svg>
+<p style="font-size:26px;font-weight:600;color:#4F3AD9">Round by round</p>
+</div>
+<h3 style="font-size:28px;font-weight:600">What dilution looks like</h3>
+<p style="font-size:24px;line-height:1.4;color:#3A3A40">Before and after a raise, in squares. Founders and finance leads share these.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="height:140px;background:#FFF6E0;border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:20px">
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:56px;font-weight:600;color:#8A5A00">RSU</p>
+<p style="font-size:28px;color:#8A5A00">vs</p>
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:56px;font-weight:600;color:#8A5A00">SAR</p>
+</div>
+<h3 style="font-size:28px;font-weight:600">One term per card</h3>
+<p style="font-size:24px;line-height:1.4;color:#3A3A40">Glossary singles: 409A, strike price, RSU vs SAR. Quick to make, easy to save.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="height:140px;background:#5F46FF;border-radius:12px;padding:20px 24px;display:flex;flex-direction:column;justify-content:center;gap:6px">
+<p style="font-size:24px;color:#EDE9FE">Customer story</p>
+<p style="font-size:32px;font-weight:600;color:#FAFAFB">A buyback, by the numbers</p>
+</div>
+<h3 style="font-size:28px;font-weight:600">Buyback breakdowns</h3>
+<p style="font-size:24px;line-height:1.4;color:#3A3A40">Real customer liquidity events, with their permission and dated figures.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="height:140px;background:#FFFFFF;border:1px solid #E5E5E7;border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:24px">
+<svg aria-label="Calendar grid with two dates marked" width="150" height="96" viewBox="0 0 150 96" xmlns="http://www.w3.org/2000/svg"><g fill="#EDE9FE"><rect x="0" y="0" width="18" height="18" rx="3"/><rect x="22" y="0" width="18" height="18" rx="3"/><rect x="44" y="0" width="18" height="18" rx="3"/><rect x="66" y="0" width="18" height="18" rx="3"/><rect x="88" y="0" width="18" height="18" rx="3"/><rect x="110" y="0" width="18" height="18" rx="3"/><rect x="132" y="0" width="18" height="18" rx="3"/><rect x="0" y="26" width="18" height="18" rx="3"/><rect x="22" y="26" width="18" height="18" rx="3"/><rect x="66" y="26" width="18" height="18" rx="3"/><rect x="88" y="26" width="18" height="18" rx="3"/><rect x="110" y="26" width="18" height="18" rx="3"/><rect x="132" y="26" width="18" height="18" rx="3"/><rect x="0" y="52" width="18" height="18" rx="3"/><rect x="22" y="52" width="18" height="18" rx="3"/><rect x="44" y="52" width="18" height="18" rx="3"/><rect x="66" y="52" width="18" height="18" rx="3"/><rect x="88" y="52" width="18" height="18" rx="3"/><rect x="132" y="52" width="18" height="18" rx="3"/><rect x="0" y="78" width="18" height="18" rx="3"/><rect x="22" y="78" width="18" height="18" rx="3"/><rect x="44" y="78" width="18" height="18" rx="3"/><rect x="66" y="78" width="18" height="18" rx="3"/></g><rect x="44" y="26" width="18" height="18" rx="3" fill="#5F46FF"/><rect x="110" y="52" width="18" height="18" rx="3" fill="#8A5A00"/></svg>
+<p style="font-size:26px;font-weight:600;color:#131314">This month</p>
+</div>
+<h3 style="font-size:28px;font-weight:600">Compliance calendar</h3>
+<p style="font-size:24px;line-height:1.4;color:#3A3A40">Trading windows and filing dates for listed companies. A reason to come back monthly.</p>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">All built from the same templates and chart components</p><p style="font-size:24px">19</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="sample-social" data-transition="fade" style="background:#E9E7F3;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#4F3AD9">Sample: social</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Three posts, three different jobs</h2>
+</div>
+<div style="display:flex;gap:56px;justify-content:center">
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="width:420px;height:525px;background:#F6F5FE;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:14px;box-shadow:0 12px 32px rgba(13,10,64,0.12)">
+<p style="font-size:32px;font-weight:600;line-height:1.15;letter-spacing:-1px">The life of an ESOP, in five steps</p>
+<div style="flex:1"></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;gap:12px;align-items:center"><div style="width:60px;height:36px;background:#EDE9FE;border-radius:6px"></div><p style="font-size:24px">Grant</p></div>
+<div style="display:flex;gap:12px;align-items:center"><div style="width:110px;height:36px;background:#C9C1FF;border-radius:6px"></div><p style="font-size:24px">Vest</p></div>
+<div style="display:flex;gap:12px;align-items:center"><div style="width:160px;height:36px;background:#5F46FF;border-radius:6px"></div><p style="font-size:24px">Exercise</p></div>
+<div style="display:flex;gap:12px;align-items:center"><div style="width:210px;height:36px;background:#4F3AD9;border-radius:6px"></div><p style="font-size:24px">Hold</p></div>
+<div style="display:flex;gap:12px;align-items:center"><div style="width:260px;height:36px;background:#1E7A46;border-radius:6px"></div><p style="font-size:24px">Sell</p></div>
+</div>
+<p style="font-size:24px;color:#6B6B70">EquityList</p>
+</div>
+<p style="font-size:24px;font-weight:600">Infographic</p>
+<p style="font-size:24px;color:#3A3A40">Saves and shares</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="width:420px;height:525px;background:#0D0A40;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:20px;box-shadow:0 12px 32px rgba(13,10,64,0.18)">
+<p style="font-size:24px;color:#B9AEFF">From the EquityList team</p>
+<p style="font-size:34px;font-weight:600;line-height:1.15;letter-spacing:-1px;color:#F6F5FE">3 cap table mistakes we see before a Series A</p>
+<div style="flex:1"></div>
+<div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid #2A2470;padding:16px 0 0 0">
+<p style="font-size:24px;color:#C9C3F2"><span style="color:#7A66FF">01</span>  Unsigned SAFEs</p>
+<p style="font-size:24px;color:#C9C3F2"><span style="color:#7A66FF">02</span>  Pool sized by guess</p>
+<p style="font-size:24px;color:#C9C3F2"><span style="color:#7A66FF">03</span>  Versions in email</p>
+</div>
+</div>
+<p style="font-size:24px;font-weight:600">Thought leadership</p>
+<p style="font-size:24px;color:#3A3A40">Founders and CFOs</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="width:420px;height:525px;background:#5F46FF;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:16px;box-shadow:0 12px 32px rgba(13,10,64,0.18)">
+<p style="font-size:24px;color:#EDE9FE">Quick poll</p>
+<p style="font-size:34px;font-weight:600;line-height:1.15;letter-spacing:-1px;color:#FAFAFB">Do your employees know what their ESOPs are worth?</p>
+<div style="flex:1"></div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:24px;color:#131314;background:#FAFAFB;border-radius:999px;padding:10px 24px">Yes, exactly</p>
+<p style="font-size:24px;color:#131314;background:#FAFAFB;border-radius:999px;padding:10px 24px">Roughly</p>
+<p style="font-size:24px;color:#131314;background:#FAFAFB;border-radius:999px;padding:10px 24px">No idea</p>
+</div>
+</div>
+<p style="font-size:24px;font-weight:600">Engagement</p>
+<p style="font-size:24px;color:#3A3A40">People teams</p>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">1080 × 1350, LinkedIn and Instagram</p><p style="font-size:24px">20</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="sample-sales" data-transition="fade" style="background:#0D0A40;color:#F6F5FE;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#B9AEFF">Sample: a sales slide</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#F6F5FE">Move your cap table out of Excel</h2>
+</div>
+<div style="display:flex;gap:64px;flex:1">
+<div style="flex:1;display:flex;gap:24px">
+<div style="flex:1;background:#17124F;border-radius:16px;padding:36px;display:flex;flex-direction:column;gap:20px">
+<p style="font-size:24px;color:#9A93CF">Today</p>
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:26px;color:#C9C3F2">captable_final_v7.xlsx</p>
+<p style="font-size:26px;line-height:1.45;color:#C9C3F2">Dilution math by hand</p>
+<p style="font-size:26px;line-height:1.45;color:#C9C3F2">Grant letters over email</p>
+<p style="font-size:26px;line-height:1.45;color:#C9C3F2">Employees ask HR what they own</p>
+</div>
+<div style="flex:1;background:#5F46FF;border-radius:16px;padding:36px;display:flex;flex-direction:column;gap:20px">
+<p style="font-size:24px;color:#EDE9FE">With EquityList</p>
+<p style="font-size:26px;font-weight:600;color:#FAFAFB">One ownership ledger</p>
+<p style="font-size:26px;line-height:1.45;color:#FAFAFB">Dilution modeled before you sign</p>
+<p style="font-size:26px;line-height:1.45;color:#FAFAFB">Grants e-signed in the platform</p>
+<p style="font-size:26px;line-height:1.45;color:#FAFAFB">Employees see their own dashboard</p>
+</div>
+</div>
+<div style="width:420px;display:flex;flex-direction:column;border-top:2px solid #5F46FF">
+<div style="padding:24px 0;border-bottom:1px solid #2A2470;display:flex;flex-direction:column;gap:4px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:56px;color:#F6F5FE">650+</p><p style="font-size:24px;color:#C9C3F2">companies</p></div>
+<div style="padding:24px 0;border-bottom:1px solid #2A2470;display:flex;flex-direction:column;gap:4px"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:56px;color:#F6F5FE">120+</p><p style="font-size:24px;color:#C9C3F2">switched this year</p></div>
+<div style="padding:24px 0;display:flex;flex-direction:column;gap:4px"><p style="font-size:28px;font-weight:600;color:#F6F5FE">SOC 2 Type II</p><p style="font-size:24px;color:#C9C3F2">ISO 27001, GDPR, DPDP</p></div>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#9A93CF"><p style="font-size:24px">Figures from equitylist.co, Oct 2026</p><p style="font-size:24px">21</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="sample-enterprise" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">Sample: a hard concept, for an enterprise reader</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">How a trading window works</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;height:80px">
+<div style="width:160px;background:#EDE9FE;border-radius:12px 0 0 12px;display:flex;align-items:center;padding:0 20px"><p style="font-size:24px;color:#4F3AD9">Open</p></div>
+<div style="flex:1;background:#FFF6E0;border-left:4px solid #8A5A00;border-right:4px solid #8A5A00;display:flex;align-items:center;justify-content:center"><p style="font-size:28px;font-weight:600;color:#8A5A00">Window closed: no trading by designated persons</p></div>
+<div style="width:200px;background:#FFF6E0;border-right:4px solid #8A5A00;display:flex;align-items:center;justify-content:center"><p style="font-size:24px;color:#8A5A00">48 hours</p></div>
+<div style="width:360px;background:#5F46FF;border-radius:0 12px 12px 0;display:flex;align-items:center;padding:0 24px"><p style="font-size:28px;font-weight:600;color:#FAFAFB">Open again</p></div>
+</div>
+<div style="display:flex">
+<p style="width:160px;font-size:24px;color:#6B6B70"> </p>
+<p style="flex:1;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#131314">↑ Quarter ends</p>
+<p style="width:560px;font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#131314">↑ Results announced</p>
+</div>
+</div>
+<div style="display:flex;gap:48px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:2px solid #131314;padding:24px 0 0 0"><h3 style="font-size:32px;font-weight:600">Who it covers</h3><p style="font-size:26px;line-height:1.45;color:#3A3A40">Designated persons, usually directors, senior staff and anyone with results data, plus their immediate relatives.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:2px solid #131314;padding:24px 0 0 0"><h3 style="font-size:32px;font-weight:600">Even when open</h3><p style="font-size:26px;line-height:1.45;color:#3A3A40">Trades above the company's threshold need pre-clearance from the compliance officer first.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;border-top:2px solid #5F46FF;padding:24px 0 0 0"><h3 style="font-size:32px;font-weight:600;color:#4F3AD9">Where EquityList helps</h3><p style="font-size:26px;line-height:1.45;color:#3A3A40">Tracks window dates and routes pre-clearance requests, so ESOP exercises don't cause a violation.</p></div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Simplified from SEBI insider trading rules. Not legal advice.</p><p style="font-size:24px">22</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="proof" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">About me</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">I've sat on the People side of this</h2>
+</div>
+<div style="display:flex;gap:96px">
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:32px;line-height:1.5;color:#131314">The testimonials on equitylist.co come from People and HR leaders. Before design, I spent years in people operations and recruiting systems, so I know the questions employees bring to HR and how hard they are to answer well.</p>
+<p style="font-size:28px;line-height:1.5;color:#3A3A40">I trained as an architect first, which is where the systems habit comes from. Most recently I did brand operations at The Design Daftar in Bengaluru.</p>
+</div>
+<div style="width:660px;display:flex;flex-direction:column;border-top:2px solid #131314">
+<div style="display:flex;gap:32px;padding:24px 0;border-bottom:1px solid #E5E5E7;align-items:baseline"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:44px;color:#5F46FF;width:150px">75%</p><p style="font-size:26px;line-height:1.4;flex:1">fewer handoff failures, cross-border hiring for 50+ hires</p></div>
+<div style="display:flex;gap:32px;padding:24px 0;border-bottom:1px solid #E5E5E7;align-items:baseline"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:44px;color:#5F46FF;width:150px">40%</p><p style="font-size:26px;line-height:1.4;flex:1">NPS lift from a recruiting experience audit</p></div>
+<div style="display:flex;gap:32px;padding:24px 0;border-bottom:1px solid #E5E5E7;align-items:baseline"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:44px;color:#5F46FF;width:150px">45%</p><p style="font-size:26px;line-height:1.4;flex:1">more qualified placements in 6 months</p></div>
+<div style="display:flex;gap:32px;padding:24px 0;border-bottom:1px solid #E5E5E7;align-items:baseline"><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:44px;color:#5F46FF;width:150px">50+</p><p style="font-size:26px;line-height:1.4;flex:1">interviews with candidates, employees and hiring teams</p></div>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Details in my portfolio: snehabaid1998-byte.github.io</p><p style="font-size:24px">23</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="fit" data-transition="fade" style="background:#F6F5FE;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">About me</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">Your three asks, and where I answered them</h2>
+</div>
+<div style="display:flex;flex-direction:column;border-top:2px solid #131314">
+<div style="display:flex;gap:48px;padding:28px 0;border-bottom:1px solid #D9D6EE"><p style="font-size:28px;font-weight:600;line-height:1.3;width:520px">Social graphics: infographics, data viz, thought leadership, engagement</p><p style="font-size:26px;line-height:1.5;color:#3A3A40;flex:1">Pages 16, 19 and 20. Before this, one token set across five linked apps for Bengaluru Tech Week, and brand operations at The Design Daftar.</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:120px;text-align:right">16 19 20</p></div>
+<div style="display:flex;gap:48px;padding:28px 0;border-bottom:1px solid #D9D6EE"><p style="font-size:28px;font-weight:600;line-height:1.3;width:520px">Sales slide decks</p><p style="font-size:26px;line-height:1.5;color:#3A3A40;flex:1">Pages 17 and 21: a sample slide and the template setup so sales can build their own. I also pitched Wispr Flow an unsolicited concept deck with a working prototype.</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:120px;text-align:right">17 21</p></div>
+<div style="display:flex;gap:48px;padding:28px 0;border-bottom:1px solid #D9D6EE"><p style="font-size:28px;font-weight:600;line-height:1.3;width:520px">Complex equity concepts, made clear for enterprise</p><p style="font-size:26px;line-height:1.5;color:#3A3A40;flex:1">The vesting section and the trading-window explainer. Years in people operations taught me which questions employees actually bring to HR.</p><p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#5F46FF;width:120px;text-align:right">10–15 22</p></div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">Responsibilities from the job post</p><p style="font-size:24px">24</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="plan90" data-transition="fade" style="background:#FAFAFB;color:#131314;font-family:'Geist', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:24px;font-weight:600;color:#5F46FF">If I join</p>
+<h2 style="font-size:72px;font-weight:600;line-height:1.1;letter-spacing:-2px;color:#131314">What my first three months would look like</h2>
+</div>
+<div style="display:flex;gap:0px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:6px solid #C9C1FF;padding:32px 40px 0 0">
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">Month 1</p>
+<h3 style="font-size:40px;font-weight:600;line-height:1.15">Listen and clean up</h3>
+<ul style="font-size:26px;line-height:1.5;color:#3A3A40">
+<li>Sit with sales, People and product</li>
+<li>Cut type to Geist and Geist Mono</li>
+<li>Settle on one violet</li>
+<li>Start the dated stats sheet</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:6px solid #5F46FF;padding:32px 40px 0 0">
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">Month 2</p>
+<h3 style="font-size:40px;font-weight:600;line-height:1.15">Build the templates</h3>
+<ul style="font-size:26px;line-height:1.5;color:#3A3A40">
+<li>Chart components in Figma</li>
+<li>Canva kit for sales decks</li>
+<li>Social templates for posts</li>
+<li>Short guide on who edits what</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;border-top:6px solid #0D0A40;padding:32px 0 0 0">
+<p style="font-family:'Geist Mono', 'Courier New', monospace;font-size:24px;color:#6B6B70">Month 3</p>
+<h3 style="font-size:40px;font-weight:600;line-height:1.15">Start publishing</h3>
+<ul style="font-size:26px;line-height:1.5;color:#3A3A40">
+<li>A monthly equity explainer series</li>
+<li>One People-team guide to ESOPs</li>
+<li>Track saves and shares, not likes</li>
+<li>Review the kit with the Head of Branding</li>
+</ul>
+</div>
+</div>
+<div style="position:absolute;left:128px;right:128px;bottom:64px;display:flex;justify-content:space-between;font-family:'Geist Mono', 'Courier New', monospace;color:#6B6B70"><p style="font-size:24px">A starting plan. It changes after month one's conversations.</p><p style="font-size:24px">25</p></div>
+
+</section>
+</div></div>
+<div class="frame"><div class="stage"><section id="close" data-transition="fade" style="background:#0D0A40;color:#F6F5FE;font-family:'Geist', Arial, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+<svg aria-label="" style="position:absolute;left:1000px;top:200px;width:792px;height:752px" width="792" height="752" viewBox="0 0 792 752" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,752 H132 V602 H264 V512 H396 V422 H528 V302 H660 V152 H792 V752 Z" fill="#1E176B"/>
+<path d="M0,752 H132 V602 H264 V512 H396 V422 H528 V302 H660 V152 H792" fill="none" stroke="#5F46FF" stroke-width="8"/>
+<circle cx="792" cy="152" r="16" fill="#F6F5FE"/>
+</svg>
+<p style="font-size:28px;color:#B9AEFF">Thanks for reading</p>
+<div style="display:flex;flex-direction:column;gap:32px;width:860px">
+<h1 style="font-size:96px;font-weight:600;line-height:1.05;letter-spacing:-3px;color:#F6F5FE">I'd love to talk about the role.</h1>
+<p style="font-size:32px;line-height:1.45;color:#C9C3F2">Happy to walk through any of this, or redo the vesting section with real EquityList data if that's useful.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:32px;font-weight:600;color:#F6F5FE">Sneha Baid</p>
+<p style="font-size:28px;color:#C9C3F2">snehabaid.199@gmail.com  ·  snehabaid1998-byte.github.io</p>
+</div>
+
+</section>
+</div></div>
+<script>
+function fit(){document.querySelectorAll('.frame').forEach(function(f){f.firstElementChild.style.transform='scale('+(f.clientWidth/1920)+')';});}
+window.addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>
